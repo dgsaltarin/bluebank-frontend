@@ -1,1 +1,14 @@
 <button mat-raised-button color="primary" [routerLink]="''">Volver</button>
+<form [formGroup]="formBalance" (submit)="$event.preventDefault()">
+  <mat-form-field appearance="outline">
+    <mat-label>Numero de cuenta</mat-label>
+    <input required matInput formControlName="accountNumber">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Saldo</mat-label>
+    <input matInput formControlName="balance">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" [disabled]="formBalance.invalid" (click)="consultBalance()">Consultar Salodo</button>
+</form>

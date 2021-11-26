@@ -1,1 +1,14 @@
 <button mat-raised-button color="primary" [routerLink]="''">Volver</button>
+<form [formGroup]="transactionForm" (submit)="$event.preventDefault()">
+  <mat-form-field appearance="outline">
+    <mat-label>Numero de cuenta</mat-label>
+    <input required matInput formControlName="accoutnNumber">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Valor</mat-label>
+    <input required matInput formControlName="amount">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" [disabled]="transactionForm.invalid" (click)="subtractMoney()">Sacar</button>
+</form>

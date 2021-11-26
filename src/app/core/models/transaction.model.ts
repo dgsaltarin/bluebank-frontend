@@ -1,6 +1,5 @@
 export interface Transaction {
-  id: number,
+  accountNumber: number
   operation: string,
   amount: number,
-  date: Date
 }

@@ -1,14 +1,14 @@
 <button mat-raised-button color="primary" [routerLink]="''">Volver</button>
-<form>
+<form [formGroup]="formCreateAccount" (submit)="$event.preventDefault()">
   <mat-form-field appearance="outline">
     <mat-label>Nombre Usuario</mat-label>
-    <input matInput>
+    <input required matInput formControlName="userName">
   </mat-form-field>
 
   <mat-form-field appearance="outline">
     <mat-label>Valor Inicial</mat-label>
-    <input matInput>
+    <input required matInput formControlName="initialBalance">
   </mat-form-field>
 
-  <button mat-raised-button color="primary">Crear Cuenta</button>
+  <button mat-raised-button color="primary" [disabled]="formCreateAccount.invalid" (click)="createAccount()">Crear Cuenta</button>
 </form>
