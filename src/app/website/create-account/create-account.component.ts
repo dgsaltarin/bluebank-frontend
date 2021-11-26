@@ -28,7 +28,7 @@ export class CreateAccountComponent implements OnInit {
   }
 
   public createAccount(): void {
-    this.accountService.createAccount(this.formCreateAccount.value);
+    this.accountService.createAccount(this.formCreateAccount.value).subscribe();
   }
 
 }

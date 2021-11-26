@@ -28,7 +28,7 @@ export class AddComponent implements OnInit {
     transaction.accountNumber = this.accountNumber.value;
     transaction.amount = this.amount.value;
     transaction.operation = 'ADD';
-    this.transactionService.addMoney(transaction);
+    this.transactionService.addMoney(transaction).subscribe();
   }
 
 }

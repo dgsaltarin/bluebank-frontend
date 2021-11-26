@@ -28,6 +28,6 @@ export class SubtractComponent implements OnInit {
     transaction.accountNumber = this.accountNumber.value;
     transaction.amount = this.amount.value;
     transaction.operation = 'SUBTRACT';
-    this.transactionService.subtractMoney(transaction);
+    this.transactionService.subtractMoney(transaction).subscribe();
   }
 }

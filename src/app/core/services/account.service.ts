@@ -14,7 +14,7 @@ export class AccountService {
 
   createAccount(account: Account): Observable<any> {
     console.log('enviando ')
-    return this.http.post(`${environment.API_BASE_URL}/account/`, account);
+    return this.http.post(`${environment.API_BASE_URL}/account`, account);
   }
 
   consultBalance(accountNumber: number): Observable<any> {

@@ -1,12 +1,12 @@
 <button mat-raised-button color="primary" [routerLink]="''">Volver</button>
 <form [formGroup]="transactionForm" (submit)="$event.preventDefault()">
   <mat-form-field appearance="outline">
-    <mat-label>Nombre Usuario</mat-label>
+    <mat-label>Numero de Cuenta</mat-label>
     <input required matInput formControlName="accountNumber">
   </mat-form-field>
 
   <mat-form-field appearance="outline">
-    <mat-label>Valor Inicial</mat-label>
+    <mat-label>Valor</mat-label>
     <input required matInput formControlName="amount">
   </mat-form-field>
 
